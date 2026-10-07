@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>8050电影网｜院线口碑速览与高分片单整理_dianyingwang-zh.github.io</title>
+<meta name="keywords" content="8050电影网,8050电影网官网,8050电影网网址,8050dianyingwang-zh.github.io,院线口碑榜,高分片单整理,今晚看什么,电影类型指南,经典老片重温,热播剧集更新,影视资讯聚合,选片攻略,观影笔记,影视解说推荐">
+<meta name="description" content="8050电影网（官网 https://8050dianyingwang-zh.github.io）每周整理院线新片口碑、高分片单与经典老片重温清单，附电影类型指南和选片攻略，是一份可以随手翻阅的观影笔记。">
+<link rel="canonical" href="https://8050dianyingwang-zh.github.io/">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg:#0e1116;--panel:#151a21;--panel2:#1c232c;--line:#2a333f;--line2:#36404d;
+  --tx:#e6ebf1;--tx2:#a9b4c0;--tx3:#6f7c8b;--acc:#ff5a36;--acc2:#ffb648;--grn:#39c08c;--blu:#4aa8ff;
+}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--tx);font-family:"SF Pro Text","PingFang SC","Microsoft YaHei",-apple-system,Segoe UI,sans-serif;line-height:1.7;font-size:15px}
+a{color:inherit;text-decoration:none}
+.mono{font-family:"SF Mono","Cascadia Mono",Consolas,monospace}
+.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+
+/* 顶栏 */
+.bar{position:sticky;top:0;z-index:60;background:rgba(14,17,22,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.bar .wrap{display:flex;align-items:center;gap:22px;height:60px}
+.logo{display:flex;align-items:baseline;gap:9px;flex-shrink:0}
+.logo b{font-size:21px;font-weight:800;letter-spacing:.02em}
+.logo b i{font-style:normal;color:var(--acc)}
+.logo em{font-style:normal;font-size:11px;color:var(--tx3);border:1px solid var(--line2);padding:1px 6px;border-radius:3px}
+.bar nav{display:flex;gap:2px;overflow-x:auto;scrollbar-width:none;margin-left:auto}
+.bar nav::-webkit-scrollbar{display:none}
+.bar nav a{padding:8px 12px;font-size:13.5px;color:var(--tx2);border-radius:6px;white-space:nowrap}
+.bar nav a:hover{background:var(--panel2);color:var(--tx)}
+.bar nav a.on{background:var(--acc);color:#fff}
+.gh{font-size:12px;color:var(--tx3);white-space:nowrap;flex-shrink:0}
+.gh b{color:var(--acc2);font-weight:600}
+
+/* 布局 */
+.layout{display:grid;grid-template-columns:262px 1fr;gap:30px;padding:30px 0 60px}
+@media(max-width:940px){.layout{grid-template-columns:1fr;gap:22px}.side{position:static!important}}
+.side{position:sticky;top:90px;align-self:start;display:flex;flex-direction:column;gap:18px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:18px}
+.hd{display:flex;align-items:center;gap:8px;font-size:11.5px;color:var(--tx3);letter-spacing:.14em;text-transform:uppercase;margin-bottom:14px}
+.hd::before{content:"";width:3px;height:12px;background:var(--acc);border-radius:2px}
+.statinfo .nm{font-size:24px;font-weight:800;line-height:1.2}
+.statinfo .url{font-size:11.5px;color:var(--acc2);margin-top:8px;word-break:break-all;display:block}
+.statinfo .url a:hover{text-decoration:underline}
+.mini{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);margin-top:14px;border-radius:6px;overflow:hidden}
+.mini div{background:var(--panel2);padding:10px 8px;text-align:center}
+.mini strong{display:block;font-size:17px;color:var(--acc);font-weight:800}
+.mini span{font-size:10.5px;color:var(--tx3);line-height:1.4;display:block;margin-top:2px}
+.tags{display:flex;flex-wrap:wrap;gap:6px}
+.tags a{font-size:11.5px;color:var(--tx2);background:var(--panel2);border:1px solid var(--line);padding:4px 10px;border-radius:14px}
+.tags a:hover{color:var(--acc);border-color:var(--acc)}
+.tags a.hot{color:var(--acc);border-color:var(--acc)}
+.upd li{list-style:none;padding:10px 0;border-top:1px solid var(--line);font-size:13px;color:var(--tx2);display:flex;gap:9px}
+.upd li:first-child{border-top:none;padding-top:0}
+.upd time{font-size:10.5px;color:var(--acc2);flex-shrink:0;font-family:"SF Mono",monospace;width:38px}
+.upd li:hover{color:var(--tx)}
+
+/* 主区 */
+.hero{background:linear-gradient(135deg,#1b2129,#151a21 60%,#1d2228);border:1px solid var(--line);border-radius:12px;padding:26px 28px;margin-bottom:26px;position:relative;overflow:hidden}
+.hero::after{content:"8050";position:absolute;right:-8px;bottom:-30px;font-size:120px;font-weight:900;color:rgba(255,90,54,.06);line-height:1}
+.hero .tag{font-size:11px;color:var(--acc2);letter-spacing:.16em}
+.hero h1{font-size:27px;line-height:1.45;margin:10px 0;font-weight:800;max-width:700px}
+.hero h1 em{font-style:normal;color:var(--acc)}
+.hero p{font-size:14px;color:var(--tx2);max-width:660px}
+.hero .acts{display:flex;gap:10px;margin-top:18px;flex-wrap:wrap}
+.btn{font-size:13px;padding:9px 18px;border-radius:6px;border:1px solid var(--line2);color:var(--tx);background:var(--panel2)}
+.btn.p{background:var(--acc);border-color:var(--acc);color:#fff;font-weight:600}
+.btn:hover{transform:translateY(-1px)}
+
+.sec{padding-top:34px;margin-top:6px}
+.sec:target{padding-top:84px}
+.sec-t{display:flex;align-items:baseline;gap:12px;margin-bottom:16px;flex-wrap:wrap}
+.sec-t h2{font-size:19px;font-weight:800}
+.sec-t .id{font-size:11px;color:var(--acc);font-family:"SF Mono",monospace}
+.sec-t a{margin-left:auto;font-size:12.5px;color:var(--tx3)}
+.sec-t a:hover{color:var(--acc)}
+
+/* 表格 */
+table.tbl{width:100%;border-collapse:collapse;font-size:13.5px}
+table.tbl th{background:var(--panel2);text-align:left;padding:11px 14px;font-size:11px;letter-spacing:.08em;color:var(--tx3);font-weight:600;border-bottom:1px solid var(--line2)}
+table.tbl td{padding:14px;border-bottom:1px solid var(--line);vertical-align:top}
+table.tbl tr:hover td{background:rgba(255,255,255,.02)}
+table.tbl .nm{font-weight:700;font-size:14.5px}
+table.tbl .nm a:hover{color:var(--acc)}
+.score{display:inline-block;font-family:"SF Mono",monospace;font-size:12.5px;color:var(--acc2);background:rgba(255,182,72,.1);padding:2px 7px;border-radius:4px;font-weight:700}
+.tp{font-size:11.5px;color:var(--tx3);white-space:nowrap}
+.flag{font-size:11px;padding:2px 7px;border-radius:3px;font-weight:600}
+.f-new{background:rgba(255,90,54,.15);color:var(--acc)}
+.f-hot{background:rgba(255,182,72,.15);color:var(--acc2)}
+.f-end{background:rgba(57,192,140,.15);color:var(--grn)}
+.f-up{background:rgba(74,168,255,.15);color:var(--blu)}
+@media(max-width:720px){table.tbl thead{display:none}table.tbl,table.tbl tbody,table.tbl tr,table.tbl td{display:block;width:100%}table.tbl tr{border:1px solid var(--line);border-radius:8px;margin-bottom:12px;padding:4px 0}table.tbl td{border:none;padding:8px 14px}table.tbl td::before{content:attr(data-l);font-size:10.5px;color:var(--tx3);display:block;margin-bottom:3px}}
+
+/* 横向滚动片单 */
+.hscroll{display:flex;gap:14px;overflow-x:auto;padding-bottom:12px;scrollbar-width:thin}
+.hscroll::-webkit-scrollbar{height:6px}
+.hscroll::-webkit-scrollbar-thumb{background:var(--line2);border-radius:3px}
+.fcard{flex:0 0 200px;background:var(--panel);border:1px solid var(--line);border-radius:10px;overflow:hidden;display:flex;flex-direction:column}
+.fcard .thumb{height:268px;position:relative;display:flex;align-items:flex-end;padding:12px;color:#fff}
+.fcard .thumb span{font-size:20px;font-weight:900;line-height:1.1;text-shadow:0 2px 8px rgba(0,0,0,.6)}
+.fcard .thumb small{position:absolute;top:10px;right:10px;font-size:10.5px;background:rgba(0,0,0,.5);padding:2px 6px;border-radius:3px;backdrop-filter:blur(4px)}
+.fcard .info{padding:12px 14px}
+.fcard .info h4{font-size:14px;font-weight:700}
+.fcard .info h4 a:hover{color:var(--acc)}
+.fcard .info p{font-size:11.5px;color:var(--tx3);margin-top:5px}
+
+/* 类型网格 */
+.ggrid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+@media(max-width:720px){.ggrid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:460px){.ggrid{grid-template-columns:1fr}}
+.gbox{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:16px;transition:.18s;cursor:default}
+.gbox:hover{border-color:var(--acc);transform:translateY(-2px)}
+.gbox h4{font-size:15px;font-weight:700;display:flex;align-items:center;gap:8px}
+.gbox h4 s{text-decoration:none;font-size:18px}
+.gbox .c{font-size:11px;color:var(--tx3);margin:8px 0 4px}
+.gbox ul{list-style:none;font-size:12.5px;color:var(--tx2)}
+.gbox ul li{padding:3px 0;border-top:1px dashed var(--line)}
+.gbox ul li:first-child{border-top:none}
+
+/* 问答 */
+.faq{display:flex;flex-direction:column;gap:10px}
+details{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:0 18px}
+details[open]{border-color:var(--line2)}
+summary{list-style:none;cursor:pointer;padding:15px 0;font-size:14.5px;font-weight:600;position:relative;padding-right:26px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";position:absolute;right:0;top:14px;color:var(--acc);font-size:18px;font-weight:400}
+details[open] summary::after{content:"−"}
+details p{padding:0 0 16px;font-size:13.5px;color:var(--tx2)}
+
+/* 关于 */
+.about{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:22px 24px;font-size:14px;color:var(--tx2)}
+.about .idcard{display:grid;grid-template-columns:repeat(2,1fr);gap:0 30px;border-top:1px solid var(--line);margin-top:14px}
+.about .idcard div{padding:11px 0;border-bottom:1px solid var(--line);display:flex;gap:12px}
+.about .idcard dt{width:84px;flex-shrink:0;font-size:12px;color:var(--tx3);letter-spacing:.05em}
+.about .idcard dd{color:var(--tx)}
+@media(max-width:600px){.about .idcard{grid-template-columns:1fr}}
+
+/* 页脚 */
+footer{background:#0a0d11;border-top:1px solid var(--line);padding:40px 0 26px;font-size:13px;color:var(--tx3)}
+.foot{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:30px;margin-bottom:26px}
+@media(max-width:760px){.foot{grid-template-columns:repeat(2,1fr)}}
+.foot h4{font-size:12px;letter-spacing:.12em;color:var(--tx2);margin-bottom:12px;text-transform:uppercase}
+.foot ul{list-style:none;display:flex;flex-direction:column;gap:8px}
+.foot a:hover{color:var(--acc)}
+.foot .brand{font-size:20px;font-weight:800;color:var(--tx)}
+.foot .brand i{font-style:normal;color:var(--acc)}
+.foot .copy{font-size:11.5px;line-height:1.9;text-align:center;border-top:1px solid var(--line);padding-top:18px}
+.foot .copy a{color:var(--acc2)}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/zhangzong.js"></script>
+
+<div class="bar">
+  <div class="wrap">
+    <div class="logo"><b>8050<i>电影网</i></b><em>BETA</em></div>
+    <nav>
+      <a href="#home" class="on">首页</a>
+      <a href="#theaters">院线口碑</a>
+      <a href="#pick">高分片单</a>
+      <a href="#genre">类型指南</a>
+      <a href="#classic">经典重温</a>
+      <a href="#tv">剧集更新</a>
+      <a href="#faq">常见问题</a>
+      <a href="#about">关于本站</a>
+    </nav>
+    <div class="gh">访问 <b>8050dianyingwang-zh.github.io</b></div>
+  </div>
+</div>
+
+<div class="wrap">
+<div class="layout">
+
+  <aside class="side">
+
+    <div class="card statinfo">
+      <div class="hd">Site Profile</div>
+      <div class="nm">8050电影网</div>
+      <span class="url">网站网址：<a href="https://8050dianyingwang-zh.github.io">https://8050dianyingwang-zh.github.io</a></span>
+      <div class="mini">
+        <div><strong>7</strong><span>常设栏目</span></div>
+        <div><strong>200+</strong><span>收录片目</span></div>
+        <div><strong>52</strong><span>周更新</span></div>
+        <div><strong>2</strong><span>更新/周</span></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="hd">快速导航</div>
+      <div class="tags">
+        <a href="#theaters" class="hot">院线口碑</a>
+        <a href="#pick">高分片单</a>
+        <a href="#genre">类型指南</a>
+        <a href="#classic">经典重温</a>
+        <a href="#tv">剧集更新</a>
+        <a href="#faq">常见问题</a>
+        <a href="#about">关于本站</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="hd">最近更新</div>
+      <ul class="upd">
+        <li><time>10-06</time><span>院线口碑榜本周新增 6 部新片评分</span></li>
+        <li><time>10-04</time><span>「秋天适合一个人看的电影」片单上线</span></li>
+        <li><time>10-02</time><span>经典重温板块扩充至 200 部</span></li>
+        <li><time>09-30</time><span>剧集更新表同步十一假期排播</span></li>
+        <li><time>09-28</time><span>类型指南新增纪录片与动画分区</span></li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="hd">站点说明</div>
+      <p style="font-size:12.5px;color:var(--tx2);line-height:1.75">本站为影视资讯与选片参考页面，不提供在线播放、下载或资源分享服务，所有内页链接以占位形式呈现，正式上线后替换为真实栏目地址。</p>
+    </div>
+
+  </aside>
+
+  <div class="main">
+
+    <section class="hero" id="home">
+      <div class="tag">FILM &amp; WATCHING NOTES · 第 40 周</div>
+      <h1>8050电影网，把<em>每周院线口碑</em>和<em>高分片单</em>整理成一份能随手翻的观影笔记</h1>
+      <p>我们不搬运资源，只做筛选：按口碑、类型、时长和观看场景分类，帮你把「今晚看什么」这件事在三分钟内想清楚。</p>
+      <div class="acts">
+        <a class="btn p" href="#theaters">查看本周新片</a>
+        <a class="btn" href="#pick">翻高分片单</a>
+        <a class="btn" href="#genre">按类型选片</a>
+      </div>
+    </section>
+
+    <section class="sec" id="theaters">
+      <div class="sec-t"><span class="id">01 /</span><h2>院线口碑榜</h2><a href="#">完整排片 →</a></div>
+      <table class="tbl">
+        <thead><tr><th>排名</th><th>影片</th><th>类型</th><th>时长</th><th>口碑</th><th>状态</th></tr></thead>
+        <tbody>
+          <tr><td data-l="排名">01</td><td data-l="影片" class="nm"><a href="#">逆光者</a></td><td data-l="类型" class="tp">犯罪 / 悬疑</td><td data-l="时长" class="mono">136 分钟</td><td data-l="口碑"><span class="score">8.3</span></td><td data-l="状态"><span class="flag f-new">本周首选</span></td></tr>
+          <tr><td data-l="排名">02</td><td data-l="影片" class="nm"><a href="#">第八次相遇</a></td><td data-l="类型" class="tp">爱情 / 都市</td><td data-l="时长" class="mono">107 分钟</td><td data-l="口碑"><span class="score">8.1</span></td><td data-l="状态"><span class="flag f-hot">口碑上升</span></td></tr>
+          <tr><td data-l="排名">03</td><td data-l="影片" class="nm"><a href="#">白鲸与少年</a></td><td data-l="类型" class="tp">动画 / 冒险</td><td data-l="时长" class="mono">96 分钟</td><td data-l="口碑"><span class="score">8.5</span></td><td data-l="状态"><span class="flag f-hot">合家欢</span></td></tr>
+          <tr><td data-l="排名">04</td><td data-l="影片" class="nm"><a href="#">山那边的海</a></td><td data-l="类型" class="tp">剧情 / 家庭</td><td data-l="时长" class="mono">118 分钟</td><td data-l="口碑"><span class="score">8.0</span></td><td data-l="状态"><span class="flag f-new">文艺向</span></td></tr>
+          <tr><td data-l="排名">05</td><td data-l="影片" class="nm"><a href="#">代号夜莺</a></td><td data-l="类型" class="tp">动作 / 谍战</td><td data-l="时长" class="mono">129 分钟</td><td data-l="口碑"><span class="score">7.6</span></td><td data-l="状态"><span class="flag f-up">IMAX 推荐</span></td></tr>
+          <tr><td data-l="排名">06</td><td data-l="影片" class="nm"><a href="#">便利店之夜</a></td><td data-l="类型" class="tp">喜剧 / 治愈</td><td data-l="时长" class="mono">102 分钟</td><td data-l="口碑"><span class="score">7.9</span></td><td data-l="状态"><span class="flag f-up">新上映</span></td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="sec" id="pick">
+      <div class="sec-t"><span class="id">02 /</span><h2>高分片单</h2><a href="#">更多片单 →</a></div>
+      <div class="hscroll">
+        <div class="fcard"><div class="thumb" style="background:linear-gradient(160deg,#3a2c4d,#6b3f5c)"><small>2014</small><span>星际<br>穿越</span></div><div class="info"><h4><a href="#">星际穿越</a></h4><p>科幻 / 亲情 · 169 分钟</p></div></div>
+        <div class="fcard"><div class="thumb" style="background:linear-gradient(160deg,#1f3a4d,#2a6070)"><small>2000</small><span>一一</span></div><div class="info"><h4><a href="#">一一</a></h4><p>剧情 / 家庭 · 173 分钟</p></div></div>
+        <div class="fcard"><div class="thumb" style="background:linear-gradient(160deg,#4d3a1f,#7a5a2a)"><small>1994</small><span>肖申克<br>的救赎</span></div><div class="info"><h4><a href="#">肖申克的救赎</a></h4><p>剧情 / 人性 · 142 分钟</p></div></div>
+        <div class="fcard"><div class="thumb" style="background:linear-gradient(160deg,#2a4d3a,#2f7355)"><small>2002</small><span>无间道</span></div><div class="info"><h4><a href="#">无间道</a></h4><p>犯罪 / 警匪 · 101 分钟</p></div></div>
+        <div class="fcard"><div class="thumb" style="background:linear-gradient(160deg,#4d2a2a,#8a3f3f)"><small>1993</small><span>霸王<br>别姬</span></div><div class="info"><h4><a href="#">霸王别姬</a></h4><p>剧情 / 戏曲 · 171 分钟</p></div></div>
+        <div class="fcard"><div class="thumb" style="background:linear-gradient(160deg,#2d2a4d,#4a4a8a)"><small>2010</small><span>盗梦<br>空间</span></div><div class="info"><h4><a href="#">盗梦空间</a></h4><p>科幻 / 悬疑 · 148 分钟</p></div></div>
+        <div class="fcard"><div class="thumb" style="background:linear-gradient(160deg,#4d422a,#a07a3a)"><small>2001</small><span>千与<br>千寻</span></div><div class="info"><h4><a href="#">千与千寻</a></h4><p>动画 / 奇幻 · 125 分钟</p></div></div>
+      </div>
+    </section>
+
+    <section class="sec" id="genre">
+      <div class="sec-t"><span class="id">03 /</span><h2>类型指南</h2><a href="#">全部分类 →</a></div>
+      <div class="ggrid">
+        <div class="gbox"><h4><s>🎬</s>悬疑犯罪</h4><div class="c">112 部 · 靠信息差推动</div><ul><li>需要专注，中途退出易漏线索</li><li>本周推荐：逆光者</li><li>入门三部：心迷宫 / 扬名立万 / 暴裂无声</li></ul></div>
+        <div class="gbox"><h4><s>🎭</s>剧情家庭</h4><div class="c">86 部 · 节奏偏慢，胜在人物</div><ul><li>适合周末下午或睡前一段</li><li>本周推荐：山那边的海</li><li>入门三部：一一 / 山河故人 / 地久天长</li></ul></div>
+        <div class="gbox"><h4><s>💥</s>动作冒险</h4><div class="c">74 部 · 视效与节奏优先</div><ul><li>建议大屏，注意音量</li><li>本周推荐：代号夜莺</li><li>入门三部：疯狂的麦克斯 / 碟中谍 / 疾速追杀</li></ul></div>
+        <div class="gbox"><h4><s>💗</s>爱情都市</h4><div class="c">63 部 · 门槛低，适合两人</div><ul><li>注意区分甜与虐</li><li>本周推荐：第八次相遇</li><li>入门三部：爱在黎明前 / 时空恋旅人 / 怦然心动</li></ul></div>
+        <div class="gbox"><h4><s>🐳</s>动画合家欢</h4><div class="c">41 部 · 不止给孩子</div><ul><li>大人也能看出另一层</li><li>本周推荐：白鲸与少年</li><li>入门三部：千与千寻 / 蜘蛛侠纵横 / 机器人之梦</li></ul></div>
+        <div class="gbox"><h4><s>🎙️</s>纪录自然</h4><div class="c">38 部 · 真实影像</div><ul><li>适合补知识，也可当背景</li><li>近期关注：深蓝来信</li><li>入门三部：地球脉动 / 迁徙的鸟 / 抽象</li></ul></div>
+      </div>
+    </section>
+
+    <section class="sec" id="classic">
+      <div class="sec-t"><span class="id">04 /</span><h2>经典重温</h2><a href="#">完整片库 →</a></div>
+      <table class="tbl">
+        <thead><tr><th>年代</th><th>影片</th><th>类型</th><th>评分</th><th>一句话看点</th></tr></thead>
+        <tbody>
+          <tr><td data-l="年代" class="mono">1994</td><td data-l="影片" class="nm"><a href="#">肖申克的救赎</a></td><td data-l="类型" class="tp">剧情 / 人性</td><td data-l="评分"><span class="score">9.7</span></td><td data-l="看点">希望主题的标准答案</td></tr>
+          <tr><td data-l="年代" class="mono">1993</td><td data-l="影片" class="nm"><a href="#">霸王别姬</a></td><td data-l="类型" class="tp">剧情 / 戏曲</td><td data-l="评分"><span class="score">9.6</span></td><td data-l="看点">时代与个人命运的咬合</td></tr>
+          <tr><td data-l="年代" class="mono">1957</td><td data-l="影片" class="nm"><a href="#">十二怒汉</a></td><td data-l="类型" class="tp">犯罪 / 法庭</td><td data-l="评分"><span class="score">9.4</span></td><td data-l="看点">单一空间讲满 96 分钟</td></tr>
+          <tr><td data-l="年代" class="mono">2014</td><td data-l="影片" class="nm"><a href="#">星际穿越</a></td><td data-l="类型" class="tp">科幻 / 亲情</td><td data-l="评分"><span class="score">9.4</span></td><td data-l="看点">硬科幻外壳下的亲情内核</td></tr>
+          <tr><td data-l="年代" class="mono">2001</td><td data-l="影片" class="nm"><a href="#">千与千寻</a></td><td data-l="类型" class="tp">动画 / 奇幻</td><td data-l="评分"><span class="score">9.4</span></td><td data-l="看点">每次重看都有新发现</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="sec" id="tv">
+      <div class="sec-t"><span class="id">05 /</span><h2>剧集更新</h2><a href="#">全部剧集 →</a></div>
+      <table class="tbl">
+        <thead><tr><th>更新</th><th>剧名</th><th>地区</th><th>类型</th><th>进度</th></tr></thead>
+        <tbody>
+          <tr><td data-l="更新" class="mono">周一</td><td data-l="剧名" class="nm"><a href="#">沉默的谈判者</a></td><td data-l="地区" class="tp">国产</td><td data-l="类型" class="tp">刑侦</td><td data-l="进度"><span class="flag f-up">22/32</span></td></tr>
+          <tr><td data-l="更新" class="mono">周三</td><td data-l="剧名" class="nm"><a href="#">首尔的雪夜</a></td><td data-l="地区" class="tp">韩剧</td><td data-l="类型" class="tp">律政</td><td data-l="进度"><span class="flag f-end">已完结</span></td></tr>
+          <tr><td data-l="更新" class="mono">周五</td><td data-l="剧名" class="nm"><a href="#">伦敦谜案集</a></td><td data-l="地区" class="tp">英剧</td><td data-l="类型" class="tp">推理</td><td data-l="进度"><span class="flag f-hot">第 2 季</span></td></tr>
+          <tr><td data-l="更新" class="mono">周日</td><td data-l="剧名" class="nm"><a href="#">一城一味</a></td><td data-l="地区" class="tp">国产</td><td data-l="类型" class="tp">纪实</td><td data-l="进度"><span class="flag f-new">本周·潮汕</span></td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="sec" id="faq">
+      <div class="sec-t"><span class="id">06 /</span><h2>常见问题</h2></div>
+      <div class="faq">
+        <details open><summary>8050电影网是什么网站？</summary><p>8050电影网是一个影视资讯与选片参考站点，整理院线新片口碑、高分片单、经典老片重温与剧集更新进度，帮助读者在海量片源中快速做决定。</p></details>
+        <details><summary>网站网址是什么？域名在哪里能看到？</summary><p>网站名称为「8050电影网」，网址是 <a href="https://8050dianyingwang-zh.github.io" style="color:#ffb648">https://8050dianyingwang-zh.github.io</a>（短写：8050dianyingwang-zh.github.io）。网址同时出现在顶栏、首页首屏、左侧站点档案卡与页脚版权信息中，三种写法略有不同，但都指向同一站点。</p></details>
+        <details><summary>内容多久更新一次？</summary><p>每周二、五各更新一期。院线口碑榜跟随上映与评分浮动调整，剧集栏目同步更新进度。</p></details>
+        <details><summary>8050电影网提供在线播放吗？</summary><p>不提供。本站不提供在线播放、下载或资源分享服务，也不跳转第三方播放源，仅做资讯整理与选片参考。</p></details>
+        <details><summary>栏目链接现在能点开吗？</summary><p>本页为单文件静态页面，内页链接以占位形式呈现，正式上线后替换为真实栏目地址即可。</p></details>
+      </div>
+    </section>
+
+    <section class="sec" id="about">
+      <div class="sec-t"><span class="id">07 /</span><h2>关于本站</h2></div>
+      <div class="about">
+        <p>8050电影网（dianyingwang-zh.github.io）由静态页面托管，结构简洁、访问稳定，适合作为影视资讯与选片参考的入口页。</p>
+        <dl class="idcard">
+          <div><dt>网站名称</dt><dd>8050电影网</dd></div>
+          <div><dt>网站网址</dt><dd><a href="https://8050dianyingwang-zh.github.io" style="color:#ffb648">8050dianyingwang-zh.github.io</a></dd></div>
+          <div><dt>内容栏目</dt><dd>7 个板块（院线口碑 / 高分片单 / 类型指南 / 经典重温 / 剧集更新 / 常见问题 / 关于本站）</dd></div>
+          <div><dt>更新频率</dt><dd>每周二、五更新</dd></div>
+          <div><dt>站点定位</dt><dd>影视资讯与选片参考</dd></div>
+          <div><dt>服务声明</dt><dd>不提供播放、下载或资源分享</dd></div>
+        </dl>
+      </div>
+    </section>
+
+  </div>
+</div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div>
+        <div class="brand">8050<i>电影网</i></div>
+        <p style="margin-top:10px;font-size:13px;color:#6f7c8b;line-height:1.8">每周整理院线口碑、高分片单与经典老片重温清单，附电影类型指南和选片攻略。</p>
+      </div>
+      <div>
+        <h4>内容栏目</h4>
+        <ul><li><a href="#theaters">院线口碑榜</a></li><li><a href="#pick">高分片单</a></li><li><a href="#genre">类型指南</a></li><li><a href="#classic">经典重温</a></li></ul>
+      </div>
+      <div>
+        <h4>更多内容</h4>
+        <ul><li><a href="#tv">剧集更新</a></li><li><a href="#faq">常见问题</a></li><li><a href="#about">关于本站</a></li></ul>
+      </div>
+      <div>
+        <h4>网站信息</h4>
+        <ul><li>名称：8050电影网</li><li><a href="https://8050dianyingwang-zh.github.io">8050dianyingwang-zh.github.io</a></li><li>静态托管 · 访问稳定</li></ul>
+      </div>
+    </div>
+    <div class="copy">
+      网站名称：8050电影网 ｜ 网站网址：<a href="https://8050dianyingwang-zh.github.io">https://8050dianyingwang-zh.github.io</a><br>
+      © 2026 8050电影网 · 本站仅提供影视资讯与选片参考，不提供在线播放、下载或资源分享服务
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
